@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sphinxweb-build
+
+gunicorn -c /app/config/gunicorn.conf.py sphinxweb:app
+
